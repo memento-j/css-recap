@@ -9,30 +9,49 @@
             /* div p {
                 color:green
             } */
+
             /*** direct child, so all of the ptags inside of the div that are not children to other tags
             ex: div -> p will work, but div -> section -> will not work since the p is a child of the section tag also*/
             /* div > p {
                 color: blue
             } */
+
             /*** adjacent siblings selector. in this case, only styles the FIRST p tag after the h2 tag */
-            h2 + p {
+            /* h2 + p {
                 color: purple
+            } */
+
+            /*** general sibling selector. targets all matching siblings after an element */
+            h2 ~ p {
+                color: green
             }
         </style>
     </head>
     <body>
+        <!-- combinations of tags -->
         <!-- <div>
             <p>This is inside a div</p>
-        </div> -->
+        </div> 
+        <p>not in a div</p> -->
+
+
+        <!-- direct child -->
         <!-- <div>
             <p>direct child</p>
             <section>
                 <p>not a direct child</p>
             </section>
         </div> -->
-        <p>not in a div</p>
-        <h2>h2 heading</h2>
+
+        <!-- adjacent sibling seeleector -->
+        <!-- <h2>h2 heading</h2>
         <p> this is slected</p>
-        <p>this is not</p>
+        <p>this is not</p> -->
+
+
+        <!-- general siblings selector -->
+        <h2>h2 header</h2>
+        <p>first p tag</p>
+        <p>second p tag</p>
     </body>
 </html>
