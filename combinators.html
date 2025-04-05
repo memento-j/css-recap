@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial=scale=1.0" />
+        <title>Combinators</title>
+        <style>
+            /*** combinations of tags can be seleected */
+            /* div p {
+                color:green
+            } */
+            /*** direct child, so all of the ptags inside of the div that are not children to other tags
+            ex: div -> p will work, but div -> section -> will not work since the p is a child of the section tag also*/
+            /* div > p {
+                color: blue
+            } */
+            /*** adjacent siblings selector. in this case, only styles the FIRST p tag after the h2 tag */
+            h2 + p {
+                color: purple
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div>
+            <p>This is inside a div</p>
+        </div> -->
+        <!-- <div>
+            <p>direct child</p>
+            <section>
+                <p>not a direct child</p>
+            </section>
+        </div> -->
+        <p>not in a div</p>
+        <h2>h2 heading</h2>
+        <p> this is slected</p>
+        <p>this is not</p>
+    </body>
+</html>
