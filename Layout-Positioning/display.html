@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial=scale=1.0" />
+        <title>Layout and Positioning</title>
+        <style>
+            /* .block {
+                background-color: lightblue;
+                padding: 10px;
+            }
+            
+            .inline {
+                background-color: lightgreen;
+                padding: 5px;
+            } */
+            /* Can change inline tags to block and vice versa*/
+            span {
+                display: block;
+                width: 200px;
+            }
+            div {
+                display: inline;
+            }
+            /* doesnt display anything at all */
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <!-- Block vs inline elements
+     Block: starts on new line, takes full width. examples of this are p, div, h1, and section. These elemeents stack
+     Inline: only takes needed width, stays inline. examples are span, a, and strong-->
+    <body>
+        <!-- Can see the block is taking up entire width of the page-->
+        <div class="block">I am a block elem</div>
+        <div class="hidden">div acting like span</div>
+        <!-- Can see the inline element is taking up only the space necessary-->
+        <span class="inline">I am inline</span>
+        <span class="inline">I am inline too</span>
+    </body>
+</html>
