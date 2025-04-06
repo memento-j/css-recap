@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial=scale=1.0" />
+        <title>pseudo classes</title>
+        <!-- changes styles when the elements are in a certain state -->
+        <style>
+            button:hover {
+                background-color:red
+            }
+            input:focus {
+                border: 3px solid blueviolet
+            }
+            li:nth-child(odd) {
+                background-color: lightblue;
+            }
+            li:nth-child(even) {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button>hover me</button>
+        <input type="text" placeholder="click here">
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </body>
+</html>

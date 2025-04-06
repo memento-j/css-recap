@@ -1,0 +1,56 @@
+/* 
+Best practices: 
+Always use box sizing:"border box" to avoid size issues
+Use padding for interspaacing not margin
+Use margin to separate elements
+Keep border styles consistent throughout the site
+Use box shadowing for a professional look
+
+Key takeaways:
+Box model consists of: content, padding, border, and margin
+Box sizing border box ensures width and height include padding and border
+Margins create outter space
+Padding creates inner space
+Borders wrap around elements and can have different styles
+Use box shadow for more modern look
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    /* slightly offwhite color to contrast with the white*/
+    background-color: #f4f4f4;
+    /* makes sure it takes up the whole screen
+    most flexible display property in css allows you to create flexible layouts with elements*/
+    display: flex;
+    /* justify-content: along primary axis
+    (set horizontal alignment/spacing if flex-direction is row or vertical alignment/spacing if flex-direction is column)*/
+    justify-content: center;
+    /* align-items: along secondary axis
+    (set vertical alignment if flex-direction is row or horizontal alignment if flex-direction is column)*/
+    align-items: center;
+    /* height of the broswer
+    When you use 100vh for an element's height, 
+    it will take up the entire vertical height of the user's screen, and it won't be affected by the content or other elements on the page*/
+    height: 100vh;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    /* background color of the area created for the card above*/
+    background-color: white;
+    /* changes border shape*/
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    /* rgba , red green blue values with the last one being opacity*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+    text-align: center;
+    /* will make the size 250px */
+    box-sizing: border-box;
+}
+/*h2 inside of the card class */
+.card h2 {
+    /* margins define the outer space of elements */
+    margin-bottom: 10px;
+}
+
