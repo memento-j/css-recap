@@ -4,8 +4,81 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial=scale=1.0" />
         <title>Box model</title>
+        <!-- Content, Padding (space between content and border), Border (edge around the element), Margin (space outside the element separating it from others)-->
         <style>
+            /* width and height is the content size */
+            /*  .box {
+                width: 200px;
+                height: 100px;
+                padding: 20px;
+                border: 5px solid black;
+                margin: 30px;
+                background-color: lightblue;
+            } */
             
+            /* actual size of the element will be larger if padding and borders are added*/
+            /*  .box {
+                width: 250px;
+                height: 150px;
+                background-color: lightgray;
+            } */
+
+            /* padding goes clock-wise top, right, bottom, left*/
+            /* .box {
+                padding: 30px 40px 35px 20px;
+                background-color: cornflowerblue;
+            } */
+
+            /*** 
+            BORDERS 
+            ***/
+            /* border: width style color */
+            /* the last one listed overrides the others so here the dotted blue line would show*/
+            /*.box {
+                border: 5px solid black;
+                border: 3px dashed red;
+                border: 4px dotted blue;
+                /* rounds out borders*/
+                /*border-radius: 15px; */
+                /* to make circle you would have height and width as the same thing (square) and you
+                make the border radius half of that (ex: width,height 100px radius 50px*/
+                /* height: 100px;
+                width: 100px;
+                border-radius: 50px; */
+            /* } */
+
+            /***
+            MARGIN
+            ***/
+            /* top right bottom left like padding*/
+            /* auto centering can be done with margin:auto */
+            /* .box {
+                background-color: lightblue;
+                margin: 30px 10px 5px 10px;
+                width: 200px;
+                margin:auto;
+            } */
+
+            /***
+            BOX SIZING
+            by default width and height exclude padding and border which makes the size larger than what was defined
+            to fix, use box-sizing: border-box, now width and height include the padding and border keeping the box size fixed
+            ***/
+            /* .box {
+                width: 200px;
+                height: 100px;
+                padding: 20px;
+                border: 5px solid black;
+                box-sizing: border-box;
+            } */
+            /*** 
+            BOX SHADOW
+            create 3d effect around an element
+            box-shadow: x-offset y-offset blur-radius color
+            ***/
+            .box {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+            }
         </style>
     </head>
     <body>
