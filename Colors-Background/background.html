@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds</title>
+    <style>
+        /* background color*/
+        .bg-light {
+            background-color: lightgray;
+            padding: 20px;
+        }
+        .bg-dark {
+            background-color: black;
+            padding: 20px;
+            color:white
+        }
+        /* background image */
+        .bg-img {
+            background-image: url("./weic2208a.png");
+            height: 150px;
+            /* cover uses the full image to cover the specified area, if not it will only use a small piece of the image*/
+            background-size: cover;
+            background-position: center center;
+            color: lightgray;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* for background positioning */
+        .bg-img2 {
+            background-image: url("weic2208a.png");
+            margin-top: 20px;
+            color: white;
+            padding: 20px;
+            background-position: center center;
+            height: 2000px;
+        }
+
+        /* fills the space */
+        .bg-cover {
+            background-size: color;
+        }
+        /* Contain fits the image in the element without cropping */
+        .bg-contain {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        /* background attatchment controls whether images scroll with page
+        scroll :moves as page scrolls
+        fixed :doesnt move
+        local : movees within element content */
+        .bg-attatchment {
+            background-attachment: fixed;
+        }
+        /* improve modern design asthetics*/
+        .gradient {
+            background: radial-gradient(circle, red, blue)
+        }
+    </style>
+</head>
+<body>
+    <!-- solid color background-->
+    <div class="bg-light">light background</div>
+    <div class="bg-dark">dark background</div>
+    <!-- Background image -->
+    <div class="bg-img">background image</div>
+    <!-- Background positioning
+    Use background positioning to allign images     
+    -->
+    <div class="bg-img2 bg-contain bg-attatchment">background image positioning center center</div>
+</body>
+</html>
