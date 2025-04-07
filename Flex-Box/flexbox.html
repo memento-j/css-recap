@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <!--
+    Flexbox is a CSS layout model that allows elements to easily be alligned, spced and, resized within a container. 
+    Makes designing much easier.
+    One dimentional layout system that lays out elements in rows or columns.
+    Adapts to different screen sizes.
+    Reduces the needs for floats aand positioning hacks.
+    Row (default) -> left to right
+    Column -> top to bottom
+    -->
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: lightgray;
+            padding: 10px;
+            /* flex-direction: column;*/
+            /* puts space between each element and changes with the page screen size
+            center, flex-end, flex-start, space-between, space-around, space-evenly*/
+            justify-content: flex-start;
+            height: 200px;
+            /* flex start, flex end, center, stretch (default), baseline*/
+            align-items: center;
+             /* by defaul items stay in one row, but they can be wrapped when needed using flexwrap
+             helps with multiple items being shown together at once*/
+            flex-wrap: wrap;
+       }
+        .item {
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .item:nth-child(2) {
+            /* overrides alignment for a singular item*/
+            align-self: flex-end;
+
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+        <div class="item">item3</div>
+    </div>
+</body>
+</html>
