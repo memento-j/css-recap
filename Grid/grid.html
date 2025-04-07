@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Powerful layout that lets you design 2D layouts, more flexible than flex boxes
+     when working with complex page layouts. Items positioned in rows and columns.
+     Better for structuring full webpages  -->
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            background-color: lightgray;
+            padding: 20px;
+            /* creates 3 columns and 2 rows
+            instead of pixels, use fr for dynamic resizing
+            1/4 2/4 1/4
+            1/2 1/2
+            */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            /* use gap to add space between items*/
+            gap: 20px;
+            /* horizontal alignment */
+            /* justify-items: center; */
+            /* vertical alignment*/
+            /* align-items: center; */
+            /* combines justify and align items*/
+            place-items: center;
+        }
+
+        .item {
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        /* use grid column and grid row to position elements
+        span 2 = take up 2 columns/rows*/
+        .item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+</body>
+</html>
