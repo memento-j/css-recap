@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Media query detects screen size and changes the page accordingly -->
+    <title>Responsive Typography</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        /* Default size*/
+        h1 {
+            /* 3x the size from the root (base is 16px, so this is 48px) h1 default is 32px which is 2rem*/
+            font-size: 3em;
+        }
+
+        /* Tablet (tablet size usually 768px max)*/
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mobile (mobile size usually 480px max)*/
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Typography</h1>
+    <p>This text changees size bsed on screen width.</p>
+</body>
+</html>
